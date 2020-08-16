@@ -1,15 +1,49 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import {Button, Progress} from 'semantic-ui-react'
+import {Button, Image, Divider, Header, Icon, Grid} from 'semantic-ui-react'
+
+import Comments from "./comment.js"
+import hy from "./HY.png"
+import HB from "./HB.jpeg"
 
 function App() {
   return (
     <div>
-    <p> 안녕하 세요 ! 나는 안혜빈이지 </p>
-    <Button Primary> >>hi<< </Button>
-    <Progress percent = {33} indicating/>
-    </div>
+    <Grid centered>
+    <Grid.Row>
+    <Image src = {hy} style = {{"width": 250, "height":200, "padding" : "35px"}} centered />
+    </Grid.Row>
+    <Grid.Row>
+    <Button
+      color='red'
+      content='Like'
+      icon='heart'
+      label={{ basic: true, color: 'red', pointing: 'left', content: '2,048' }}
+    />
+    <Button
+      basic
+      color='blue'
+      content='Share'
+      icon='fork'
+      label={{
+        as: 'a',
+        basic: true,
+        color: 'blue',
+        pointing: 'left',
+        content: '2,048',
+      }}
+  />
+
+    </Grid.Row>
+    </Grid>
+  <Divider horizontal>
+ <Header as='h4'>
+  <Icon name='comments' />
+  댓글 달기
+</Header>
+</Divider>
+<Comments/>
+
+      </div>
   );
 }
 
