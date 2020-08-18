@@ -23,7 +23,7 @@ class Comments extends React.Component {
           <Comment.Metadata>
             <div>2 days ago</div>
           </Comment.Metadata>
-          <Comment.Text>{detail.content}you the genius</Comment.Text>
+          <Comment.Text>you the genius</Comment.Text>
           <Comment.Actions>
             <Comment.Action active>Reply</Comment.Action>
           </Comment.Actions>
